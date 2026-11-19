@@ -17,15 +17,15 @@
 
     voxel_leaf_size: 0.25
     enable_scan_voxel_filter: true
-    scan_max_range: 60.0
+    scan_max_range: 30.0
     scan_min_range: 0.8
     scan_period: 0.1
     cloud_queue_depth: 1
     min_scan_interval_sec: 0.0
 
     use_pcd_map: true
-    map_path: "/map/map.pcd"
-    set_initial_pose: false
+    map_path: "/datalogs/kawasaki/levox/12_8/PCD/GlobalMap.pcd"
+    set_initial_pose: true
     initial_pose_x: 0.0
     initial_pose_y: 0.0
     initial_pose_z: 0.0
@@ -43,7 +43,7 @@
     # IMU preintegration backend and input units
     use_imu_preintegration: true
     imu_preintegration_use_base_frame_transform: true
-    imu_accel_scale: 1.0
+    imu_accel_scale: 9.80665
     imu_dual_queue_enabled: true
 
     # IMU seed safety gates
@@ -98,7 +98,7 @@
     reinitialization_trigger_reject_streak_scale: 50.0
     reinitialization_trigger_fitness_explosion_threshold: 1000.0
 
-    enable_map_odom_tf: true
+    enable_map_odom_tf: false
     global_frame_id: map
     odom_frame_id: odom
     base_frame_id: base_link
